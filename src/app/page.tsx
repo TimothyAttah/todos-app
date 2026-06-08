@@ -1,11 +1,10 @@
-
+export const dynamic = "force-dynamic";
 import AddTodo from "@/components/todos/AddTodo";
 import Todos from "@/components/todos/Todos";
 import { TodoProps } from "@/types";
 import prisma from "@/utils/prisma";
 
-
-async function getTodos():Promise<TodoProps[]> {
+async function getTodos(): Promise<TodoProps[]> {
   const data = await prisma.todo.findMany({
     select: {
       title: true,
@@ -31,7 +30,7 @@ export default async function Home() {
         <AddTodo />
         <div className="flex flex-col gap-5 items-center justify-center mt-10 w-screen">
           {/* Map todos */}
-          {todos.map((todo, id)=> (
+          {todos.map((todo, id) => (
             <div className="w-full" key={id}>
               <Todos todo={todo} />
             </div>

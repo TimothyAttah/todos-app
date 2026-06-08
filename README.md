@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App
 
-## Getting Started
+Stay organized and boost productivity with a modern task management application built using Next.js, TypeScript, Prisma, and MongoDB.
 
-First, run the development server:
+Designed with scalability, performance, and developer experience in mind, this project demonstrates modern full-stack development practices, including authentication, database management, protected routes, and responsive UI design.
+
+## ✨ Core Features
+
+* ✅ Secure Authentication
+* ✅ Create, Update & Delete Tasks
+* ✅ Task Completion Tracking
+* ✅ Responsive User Interface
+* ✅ MongoDB Persistence
+* ✅ Prisma ORM Integration
+* ✅ Type-Safe Architecture with TypeScript
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Next.js Server Actions / API Routes
+* Prisma ORM
+
+### Database
+
+* MongoDB
+
+### Authentication
+
+* Auth.js (NextAuth)
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./screenshots/home-screenshot.png" alt="Todo App Home Page" width="900" />
+</p>
+
+> Create a `screenshots` folder in the project root and place your images there.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+* Node.js 18+
+* pnpm (recommended)
+* MongoDB database
+
+### Installation
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:TimothyAttah/todos-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to the project directory:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd todos-app
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies:
 
-## Learn More
+```bash
+pnpm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env` file in the root directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+DATABASE_URL="your_mongodb_connection_string"
 
-## Deploy on Vercel
+AUTH_SECRET="your_auth_secret"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GOOGLE_CLIENT_ID="your_google_client_id"
+GOOGLE_CLIENT_SECRET="your_google_client_secret"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Prisma Setup
+
+Generate Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+Push the schema to MongoDB:
+
+```bash
+npx prisma db push
+```
+
+### Run the Development Server
+
+```bash
+pnpm dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/
+├── components/
+├── actions/
+├── hooks/
+├── lib/
+├── prisma/
+└── types/
+```
+
+## 🌐 Deployment
+
+This application can be deployed on Vercel with MongoDB Atlas as the database provider.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👨‍💻 Author
+
+Built by Timothy Attah using Next.js, TypeScript, Prisma, and MongoDB.
