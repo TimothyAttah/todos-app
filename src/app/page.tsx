@@ -1,9 +1,9 @@
-import Input from "@/components/input/Input";
+
 import AddTodo from "@/components/todos/AddTodo";
 import Todos from "@/components/todos/Todos";
 import { TodoProps } from "@/types";
 import prisma from "@/utils/prisma";
-import Image from "next/image";
+
 
 async function getTodos():Promise<TodoProps[]> {
   const data = await prisma.todo.findMany({
